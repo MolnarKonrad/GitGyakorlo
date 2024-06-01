@@ -1,9 +1,23 @@
 package gitgyakorlo;
 
+import java.util.Random;
+
 public class GitGyakorlo {
+    
+    private static int[] sorozat = new int[5];
+    static Random rnd = new Random();
 
     public static void main(String[] args) {
         feladatok();
+        sorozat = feltoltes(5);
+    }
+    
+    private static int[] feltoltes(int db) {
+        int[] tomb = new int[db];
+        for (int i = 0; i < 5; i++) {
+            tomb[i] = rnd.nextInt();
+        }
+        return tomb;
     }
 
     private static void feladatok() {
@@ -11,6 +25,10 @@ public class GitGyakorlo {
     }
     
     private static int osszegzes(){
+        int osszeg = 0;
+        for (int i = 0; i < sorozat.length; i++) {
+            osszeg += sorozat[i];
+        }
         return 0;
     }
     
@@ -44,6 +62,6 @@ public class GitGyakorlo {
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
-    }
+    }    
     
 }
