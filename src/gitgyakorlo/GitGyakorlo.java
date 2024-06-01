@@ -21,6 +21,10 @@ public class GitGyakorlo {
     private static void maximumKivalasztas(){
         
     }
+    
+    private static void minimumKivalasztas(){
+        
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
