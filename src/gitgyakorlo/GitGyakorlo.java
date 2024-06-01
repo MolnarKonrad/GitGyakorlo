@@ -14,32 +14,32 @@ public class GitGyakorlo {
         return 0;
     }
     
-    private static void megszamlalas(){
-        
+    private static int megszamlalas(){
+        return 0;
     }
     
-    private static void maximumKivalasztas(){
-        
+    private static int maximumKivalasztas(){
+        return 0;
     }
     
-    private static void minimumKivalasztas(){
-        
+    private static int minimumKivalasztas(){
+        return 0;
     }
     
-    private static void kivalasztas(){
-        
+    private static int kivalasztas(){
+        return 0;
     }
     
-    private static void eldontes_1_vanLegalabbEgy(){
-        
+    private static boolean eldontes_1_vanLegalabbEgy(){
+        return false;
     }
     
-    private static void eldontes_2_mind(){
-        
+    private static boolean eldontes_2_mind(){
+        return false;
     }
     
-    private static void linearisKereses(){
-        
+    private static int linearisKereses(){
+        return -1;
     }
 
     private static void konzolraIr(String kimenet) {
