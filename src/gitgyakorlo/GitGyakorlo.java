@@ -57,19 +57,49 @@ public class GitGyakorlo {
     }
 
     private static void szelsoertekekBemutatasa() {
-
+        maxKivBemutatasa();
+        minKivBemutatasa();
+    }
+    
+    private static void maxKivBemutatasa() {
+        konzolraIr("Maximum kiválasztás tétele:\n");
+        maximumKivalasztas();
+        konzolraIr("A legnagyobb elem indexe: " + maximumKivalasztas() + "\n\n");
+    }
+    
+    private static void minKivBemutatasa() {
+        konzolraIr("Minimum kiválasztás tétele:\n");
+        minimumKivalasztas();
+        konzolraIr("A legkisebb elem indexe: " + minimumKivalasztas() + "\n\n");
     }
 
     private static void kivalasztasBemutatasa() {
-
+        konzolraIr("Kiválasztás tétele:\n");
+        kivalasztas();
+        konzolraIr("Az első páros elem indexe: " + kivalasztas() + "\n\n");
     }
 
     private static void eldontesekBemutatasa() {
-
+        eldontes_1_Bemutatasa();
+        eldontes_2_Bemutatasa();
+    }
+    
+    private static void eldontes_1_Bemutatasa() {
+        konzolraIr("Eldöntés 1.tétele:\n");
+        eldontes_1_vanLegalabbEgy();
+        konzolraIr("Van-e páratlan eleme: " + eldontes_1_vanLegalabbEgy() + "\n\n");
+    }
+    
+    private static void eldontes_2_Bemutatasa() {
+        konzolraIr("Eldöntés 2.tétele:\n");
+        eldontes_2_mind();
+        konzolraIr("Van-e negativ eleme: " + eldontes_2_mind() + "\n\n");
     }
 
     private static void linKerBemutatasa() {
-
+        konzolraIr("Lineáris keresés tétele:\n");
+        linearisKereses();
+        konzolraIr("Az első 10-nél nagyobb, páratlan elem indexe: " + linearisKereses() + "\n\n");
     }
 
     private static int osszegzes() {
@@ -111,54 +141,44 @@ public class GitGyakorlo {
     }
 
     private static int kivalasztas() {
-        int ker = 0;
         int i = 0;
-        while (!(sorozat[i] == ker)) {
+        while (!(sorozat[i]%2 == 0) || (sorozat[i] == 0)) {
             i++;
         }
-        int index = i;
-        return 0;
+        return i;
     }
 
     private static boolean eldontes_1_vanLegalabbEgy() {
-        int N = sorozat.length;
-        int ker = rnd.nextInt(0, 50);
         int i = 0;
-        while (i < N && !(sorozat[i] > ker)) {
+        int N = sorozat.length;
+        while (i < N && !(sorozat[i] % 2 == 1)) {
             i++;
         }
-        boolean valasz = i < N;
-        return valasz;
+        return i < N;
     }
 
     private static boolean eldontes_2_mind() {
         int N = sorozat.length;
-        int ker = rnd.nextInt(0, 50);
+        int ker = -1;
         int i = 0;
-        while (i < N && (sorozat[i] > ker)) {
+        while (i < N && (sorozat[i] < ker)) {
             i++;
         }
-        boolean valasz = i >= N;
-        return valasz;
+        return i >= N;
     }
 
     private static int linearisKereses() {
         int N = sorozat.length;
-        int ker = rnd.nextInt(0, 50);
         int i = 0;
-        while (i < N && !(sorozat[i] > ker)) {
+        while (i < N && !(sorozat[i] % 2 == 1 && sorozat[i] > 10)) {
             i++;
         }
         boolean van = i < N;
-        if (van) {
-            System.out.printf("A keresett elem (> %d):\n", ker);
-            System.out.println("helye: " + i);
-            System.out.println("értéke: " + sorozat[i]);
+        if (i < N) {
+            return i;
         } else {
-            System.out.println("nincs a keresésnek megfelelő elem:");
-            System.out.println("Nincs > " + ker);
-        }
-        return -1;
+            return -1;
+        }        
     }
 
     private static void konzolraIr(String kimenet) {
