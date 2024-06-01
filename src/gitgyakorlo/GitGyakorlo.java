@@ -13,6 +13,10 @@ public class GitGyakorlo {
     private static int osszegzes(){
         return 0;
     }
+    
+    private static void megszamlalas(){
+        
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
