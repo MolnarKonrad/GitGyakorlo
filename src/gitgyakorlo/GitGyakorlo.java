@@ -7,7 +7,11 @@ public class GitGyakorlo {
     }
 
     private static void feladatok() {
-        
+        konzolraIr("");
+    }
+
+    private static void konzolraIr(String kimenet) {
+        System.out.print(kimenet);
     }
     
 }
