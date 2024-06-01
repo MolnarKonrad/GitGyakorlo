@@ -29,6 +29,10 @@ public class GitGyakorlo {
     private static void kivalasztas(){
         
     }
+    
+    private static void eldontes_1_vanLegalabbEgy(){
+        
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
