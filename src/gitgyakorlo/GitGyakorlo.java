@@ -25,6 +25,10 @@ public class GitGyakorlo {
     private static void minimumKivalasztas(){
         
     }
+    
+    private static void kivalasztas(){
+        
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
