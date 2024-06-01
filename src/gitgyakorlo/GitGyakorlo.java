@@ -37,6 +37,10 @@ public class GitGyakorlo {
     private static void eldontes_2_mind(){
         
     }
+    
+    private static void linearisKereses(){
+        
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
