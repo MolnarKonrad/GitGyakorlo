@@ -9,6 +9,10 @@ public class GitGyakorlo {
     private static void feladatok() {
         konzolraIr("");
     }
+    
+    private static int osszegzes(){
+        return 0;
+    }
 
     private static void konzolraIr(String kimenet) {
         System.out.print(kimenet);
